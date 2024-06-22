@@ -2,8 +2,8 @@ package hello.core;
 
 import hello.core.member.EGrade;
 import hello.core.member.Member;
-import hello.core.service.member.IMemberService;
-import hello.core.service.member.MemberServiceImpl;
+import hello.core.member.IMemberService;
+import hello.core.member.MemberServiceImpl;
 
 public class MemberApp {
 

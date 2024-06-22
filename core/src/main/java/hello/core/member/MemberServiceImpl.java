@@ -1,6 +1,5 @@
-package hello.core.service.member;
+package hello.core.member;
 
-import hello.core.member.Member;
 import hello.core.repository.IMemberRepository;
 import hello.core.repository.MemoryMemberRepositoryImpl;
 
