@@ -5,12 +5,12 @@ import hello.core.repository.MemoryMemberRepositoryImpl;
 
 public class MemberServiceImpl implements IMemberService {
 
-    private final IMemberRepository memberRepository = new MemoryMemberRepositoryImpl();
+    private final IMemberRepository memberRepository;
 
 
-//    public MemberServiceImpl(IMemberRepository memberRepository) {
-//        this.memberRepository = memberRepository;
-//    }
+    public MemberServiceImpl(IMemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     @Override
     public void join(Member member) {
