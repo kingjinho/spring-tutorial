@@ -8,17 +8,23 @@ import hello.core.order.IOrderService;
 import hello.core.order.OrderServiceImpl;
 import hello.core.repository.IMemberRepository;
 import hello.core.repository.MemoryMemberRepositoryImpl;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class AppConfig {
 
+    @Bean
     public IMemberService memberService() {
         return new MemberServiceImpl(memberRepository());
     }
 
-    private IMemberRepository memberRepository() {
+    @Bean
+    public IMemberRepository memberRepository() {
         return new MemoryMemberRepositoryImpl();
     }
 
+    @Bean
     public IOrderService orderService() {
         return new OrderServiceImpl(
                 memberRepository(),
@@ -26,6 +32,7 @@ public class AppConfig {
         );
     }
 
+    @Bean
     public IDiscountPolicy discountPolicy() {
         return new FixedDiscountPolicy();
     }
