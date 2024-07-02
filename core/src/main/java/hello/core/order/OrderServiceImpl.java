@@ -26,4 +26,8 @@ public class OrderServiceImpl implements IOrderService {
 
         return new Order(memberId, itemName, itemPrice, discountPrice);
     }
+
+    public IMemberRepository getMemberRepository() {
+        return memberRepository;
+    }
 }
