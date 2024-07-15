@@ -2,11 +2,11 @@ package hello.core.discount;
 
 import hello.core.member.EGrade;
 import hello.core.member.Member;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-@Qualifier("mainDiscountPolicy")
+@Primary
 public class RateDiscountPolicy implements IDiscountPolicy {
 
     private int discountPercent = 10;
