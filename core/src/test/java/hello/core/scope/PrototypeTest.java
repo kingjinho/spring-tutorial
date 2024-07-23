@@ -22,7 +22,7 @@ public class PrototypeTest {
         System.out.println("bean = " + bean);
         System.out.println("bean1 = " + bean1);
 
-        assertThat(bean).isNotEqualTo(bean1);
+        assertThat(bean).isNotSameAs(bean1);
 
         ac.close();
     }
