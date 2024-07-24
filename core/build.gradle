@@ -34,6 +34,8 @@ dependencies {
 
 	testCompileOnly 'org.projectlombok:lombok'
 	testAnnotationProcessor 'org.projectlombok:lombok'
+
+	implementation 'javax.inject::jakarta.inject-api:2.0.1'
 }
 
 tasks.named('test') {
